@@ -32,6 +32,7 @@ RUN mkdir -p /app/uploads && chown -R spring:spring /app
 
 USER spring:spring
 
+# ⚠️ CRITIQUE: Render utilise dynamiquement le port 10000 par défaut [citation:7]
 # Il faut donc exposer un port variable ou 10000
 # On expose 8080 pour le développement local, mais Render l'ignorera
 EXPOSE 8080
